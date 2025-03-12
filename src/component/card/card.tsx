@@ -8,7 +8,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ data }) => {
   const { original_title, original_name, poster_path } = data;
   return (
-    <div className="flex flex-col w-[300px] shrink-0 rounded-xl shadow-xl">
+    <div className="flex flex-col shrink-0 rounded-xl shadow-xl">
       <img
         src={`https://image.tmdb.org/t/p/original${poster_path}`}
         alt={original_title ?? original_name}
