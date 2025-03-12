@@ -5,6 +5,7 @@ import Layout from "../layout";
 import Login from "../pages/login/login";
 import ProtectedRoutes from "./protectedRoutes";
 import Admin from "../pages/admin/admin";
+import Airing from "../pages/airing/airing";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
         element: <Detail />,
         path: "/detail",
       },
+      {
+        element: <Airing/>,
+        path: "/airing"
+      }
     ],
   },
 ]);

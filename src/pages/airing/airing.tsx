@@ -1,10 +1,10 @@
 import React from "react";
-import { useTrendingData } from "../../hooks/useTrendingData";
+import { useAiringData } from "../../hooks/useAiringData";
 import Card from "../../component/card/card";
 import { Movie } from "../../services/type";
 
-const Home: React.FC = () => {
-  const { trending, paginationInfo, setPaginationInfo } = useTrendingData();
+const Airing: React.FC = () => {
+  const { airing, paginationInfo, setPaginationInfo } = useAiringData();
 
   const handlePrevButton = () => {
     if (paginationInfo.page > 1) {
@@ -25,10 +25,10 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
       <section className="flex flex-col py-10">
-        <h1 className="font-semibold text-3xl pl-10 text-center">Trending Movie</h1>
+        <h1 className="font-semibold text-3xl pl-10 text-center">Airing Now</h1>
 
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] place-items-center gap-3 px-10 mt-5">
-          {trending?.map((item: Movie) => (
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] place-items-center gap-7 px-10 mt-5">
+          {airing?.map((item: Movie) => (
             <Card key={item.id} data={item} />
           ))}
         </div>
@@ -52,4 +52,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Airing;

@@ -12,9 +12,9 @@ const Card: React.FC<CardProps> = ({ data }) => {
       <img
         src={`https://image.tmdb.org/t/p/original${poster_path}`}
         alt={original_title ?? original_name}
-        className="rounded-t-xl"
+        className="rounded-t-xl object-cover max-h-[380px]"
       />
-      <div className="flex flex-col">
+      <div className="flex flex-col text-center p-4 text-lg">
         <h1>{original_title ?? original_name}</h1>
       </div>
     </div>

@@ -1,10 +1,10 @@
 import axiosWithConfig from "../api";
 import { ResponseData } from "../type";
 
-export const getTrending = async (page: number) => {
+export const getAiring = async (page: number) => {
   try {
     const response = await axiosWithConfig.get(
-      `trending/all/day?language=en-US&page=${page}`
+      `tv/airing_today?language=en-US&page=${page}`
     );
 
     return response.data as ResponseData | undefined;
